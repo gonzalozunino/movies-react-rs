@@ -1,3 +1,15 @@
+# Rockstar Movies
+
+Rockstar Movies is a responsive, interactive, React / Material UI application, displaying discovery and searched Movies via The Movie Database API.<br />  
+This is only intented as a practive app.<br />
+
+## Libraries Used
+
+[React](https://en.reactjs.org/)
+[Material UI](https://material-ui.com/)
+[React Router](https://reactrouter.com/)
+[Axios](https://github.com/axios/axios)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
