@@ -8,11 +8,11 @@ import { StoreProvider } from "./store";
 import reducers from "./reducers";
 import initialState from "./store/initialState";
 
-import Hero from "./components/Hero";
+import Hero from "./components/Hero/Hero";
 // Discover movies by different types of data like average rating, number of votes, genres and certifications.
-import DiscoverMovies from "./views/DiscoverMovies";
+import DiscoverMovies from "./views/DiscoverMovies/DiscoverMovies";
 // Get the primary information about a movie.
-import MovieDetails from "./views/MovieDetails";
+import MovieDetails from "./views/MovieDetails/MovieDetails";
 
 const App = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");

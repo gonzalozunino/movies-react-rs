@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
 import {
   Avatar,
   Card,
@@ -14,25 +13,11 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 
-import api from "../api";
-import { IMAGE_URL_ORIGINAL } from "../utils/constants";
+import MovieDetailsStyles from "./MovieDetailsStyles";
+import api from "../../api";
+import { IMAGE_URL_ORIGINAL } from "../../utils/constants";
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: theme.spacing(2),
-  },
-  card: {
-    padding: theme.spacing(2),
-    maxWidth: 500,
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-}));
+const useStyles = makeStyles(MovieDetailsStyles);
 
 const MovieDetails = ({
   match: {

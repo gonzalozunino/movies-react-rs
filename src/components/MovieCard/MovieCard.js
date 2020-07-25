@@ -11,25 +11,10 @@ import {
 } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 
-import { IMAGE_URL_500 } from "../utils/constants";
+import MovieCardStyles from "./MovieCardStyles";
+import { IMAGE_URL_500 } from "../../utils/constants";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    position: "relative",
-    maxWidth: 345,
-    display: "flex",
-  },
-  overview: {
-    textOverflow: "ellipsis",
-  },
-  rating: {
-    marginLeft: theme.spacing(2),
-  },
-  star: {
-    fontSize: 12,
-    marginLeft: theme.spacing(2),
-  },
-}));
+const useStyles = makeStyles(MovieCardStyles);
 
 const MovieCard = ({
   movie: { id, title, poster_path, overview, vote_average },
