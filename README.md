@@ -5,10 +5,10 @@ This is only intented as a practive app.<br />
 
 ## Libraries Used
 
-[React](https://en.reactjs.org/)
-[Material UI](https://material-ui.com/)
-[React Router](https://reactrouter.com/)
-[Axios](https://github.com/axios/axios)
+[React](https://en.reactjs.org/)</br>
+[Material UI](https://material-ui.com/)</br>
+[React Router](https://reactrouter.com/)</br>
+[Axios](https://github.com/axios/axios)</br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
