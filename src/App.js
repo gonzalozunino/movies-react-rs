@@ -4,6 +4,10 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
+import { StoreProvider } from "./store";
+import reducers from "./reducers";
+import initialState from "./store/initialState";
+
 import Hero from "./components/Hero";
 // Discover movies by different types of data like average rating, number of votes, genres and certifications.
 import DiscoverMovies from "./views/DiscoverMovies";
@@ -41,22 +45,24 @@ const App = () => {
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Hero />
-      <Switch>
-        <Route
-          exact
-          path="/"
-          component={(props) => <DiscoverMovies {...props} />}
-        />
-        <Route
-          exact
-          path="/movie/:id"
-          component={(props) => <MovieDetails {...props} />}
-        />
-      </Switch>
-    </ThemeProvider>
+    <StoreProvider initialState={initialState} reducer={reducers}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Hero />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={(props) => <DiscoverMovies {...props} />}
+          />
+          <Route
+            exact
+            path="/movie/:id"
+            component={(props) => <MovieDetails {...props} />}
+          />
+        </Switch>
+      </ThemeProvider>
+    </StoreProvider>
   );
 };
 

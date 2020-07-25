@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useStore } from "../store";
+import { setRating } from "../actions";
+
 import { fade, makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
@@ -105,7 +108,7 @@ const DiscoverMovies = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-  const [rating, setRating] = useState(0);
+  const [{ rating }, dispatch] = useStore();
   const ratingLabel = rating > 1 ? `${rating} stars` : `1 star`;
   const debouncedSearchTerm = useDebounce(searchValue);
 
@@ -224,7 +227,7 @@ const DiscoverMovies = () => {
     });
 
     setFilteredMovies(filteredMovies);
-    setRating(newValue);
+    dispatch(setRating(newValue));
   };
 
   return (
